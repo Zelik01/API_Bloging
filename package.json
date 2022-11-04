@@ -1,0 +1,32 @@
+{
+  "name": "api_bloging",
+  "version": "1.0.0",
+  "description": "Blog API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zelik01/API_Bloging.git"
+  },
+  "author": "Stephen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zelik01/API_Bloging/issues"
+  },
+  "homepage": "https://github.com/Zelik01/API_Bloging#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.1",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^7.1.2"
+  }
+}
