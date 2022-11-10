@@ -24,12 +24,12 @@ const UserSchema = new Schema({
         type: String,
         required: [true, "Please provide a password"],
         minlength: [5, "Password must be at least 5 characters"],
-        select: false,
+        //select: false,
     },
-    blogs:[
+    posts:[
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Blog'
+            ref: 'Post'
         }
     ]
 },
@@ -60,7 +60,7 @@ UserSchema.methods.isValidPassword = async function(password) {
     return compare;
 }
 
-
+  
 const UserModel = mongoose.model('User', UserSchema);
 
 module.exports = UserModel;

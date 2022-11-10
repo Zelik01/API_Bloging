@@ -1,5 +1,5 @@
-const readingTime = (blog) => {
-    const noOfWords = blog.split(' ').length
+const readingTime = (post) => {
+    const noOfWords = post.split(' ').length
     const WPM = noOfWords / 120
     return Math.round(WPM) === 0 ? 1 : Math.round(WPM)
 }

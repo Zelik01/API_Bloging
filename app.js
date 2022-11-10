@@ -14,8 +14,8 @@ app.use(passport.initialize());
 app.use(express.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
-app.use('/user', userRoute)
-app.use('/post', postRoute)
+app.use('/', userRoute)
+app.use('/', postRoute)
 //home page
 app.get('/', (req,res)=>{
     res.status(200).json({

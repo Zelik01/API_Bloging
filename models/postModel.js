@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const postSchema = new Schema(
   {
+    created_at: Date,
     title: {
       type: String,
       required: [true, "Please provide the title"],
@@ -41,9 +42,9 @@ const postSchema = new Schema(
       ref: "User",
     },
   },
-  {collection:'Blog'}
+  {collection:'Post'}
   
 );
 
-const Blog = mongoose.model("Blog", postSchema);
-module.exports = Blog;
+const Post = mongoose.model("Post", postSchema);
+module.exports = Post;
