@@ -5,8 +5,8 @@ const passport = require('passport')
 
 const userController = require('../controller/userController')
 
-userRouter.post('/signup',passport.authenticate('signup', { session: false }), userController.userSignup);
-userRouter.post('/login', userController.userLogin);
+userRouter.post('/user/signup',passport.authenticate('signup', { session: false }), userController.userSignup);
+userRouter.post('/user/login', userController.userLogin);
 
 
 module.exports = userRouter

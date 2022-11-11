@@ -1,9 +1,39 @@
 # API_Bloging
 Blog API
 
+##### User
+| field  |  data_type | constraints  |
+|---|---|---|
+|  id |  string |  required |
+|  firstName | string  |  required  |
+|  lastName  |  string |  required  |
+|  email     | string  |  required  |
+|  password |   string |  required  |
+|  user_type |  string |  required, default: user, enum: ['user', 'admin'] |
+
+
+### Post
+| field  |  data_type | constraints  |
+
+|id         |  string    |  required |
+|created_at |  date      |  required |
+|state      | string     |  required, default: draft, enum: ['draft', 'published']|
+|title      |  string    |  required  |
+|description| string     |  required |
+|read_count |   number   |  default: 0|
+|reading_time |  number |  default: 0 |
+|tags:      |  string |  required |
+|body       |  string |  required|
+
+
+
+
+
+
+
 ### Signup User
 
-- Route: /signup
+- Route: /user/signup
 - Method: POST
 - Body: 
 ```
@@ -31,7 +61,7 @@ RESPONSE
 
 ### Login User
 
-- Route: /login
+- Route: /user/login
 - Method: POST
 - Body: 
 ```
@@ -48,7 +78,7 @@ RESPONSE
 
 =====
 #### CREATING A POST
-- Route: /blog
+- Route: /post/create
 - Method: POST
 - Header
     - Authorization: Bearer {token}
@@ -84,9 +114,9 @@ Success
     "__v": 0
   }
 }
-### Get All Published Blogs
+### Get All Published Posts
 
-- Route: /blog
+- Route: /post
 - Method: GET
 - Header
     - Authorization: Bearer {token}
