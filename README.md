@@ -78,7 +78,7 @@ RESPONSE
 
 =====
 #### CREATING A POST
-- Route: /post/create
+- Route: /blog
 - Method: POST
 - Header
     - Authorization: Bearer {token}
@@ -116,7 +116,7 @@ Success
 }
 ### Get All Published Posts
 
-- Route: /post
+- Route: /blog
 - Method: GET
 - Header
     - Authorization: Bearer {token}
